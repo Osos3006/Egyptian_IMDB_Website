@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <Title> {{cast[0].FullName}} works </Title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1 style="text-align:center"> {{cast[0].FullName}} </h1> <br />
+    <img src="{{cast[0].image}}" style="display:block; margin-left: auto; margin-right: auto; padding-bottom: 2%; ">
+    <table class="table table-bordered table-striped table-sm">
+        <thead class="table-dark">
+            <tr>
+                <th class="th-sm">Name</th>
+                <th class="th-sm">Link</th>
+                <th class="th-sm">Role</th>
+            </tr>
+        </thead>
+
+        {% for item in data %}
+        <tr>
+            <td>{{item.MovieName}}</td>
+            <td><a href="/movies/{{item.ID}}">link</a></td>
+            <td>{{item.role}} </td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+
+</body>

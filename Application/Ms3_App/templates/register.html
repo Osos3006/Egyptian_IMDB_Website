@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title> Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+</head>
+
+
+
+<body>
+    <h1 style="text-align:center"> Egyptian IMDB </h1> <br />
+    <div>
+
+
+        <h2>Welcome user, seems like your are not registered!</h2>
+        <h3>spend a moment and register yourself, please</h3>
+
+        <form method="POST">
+
+            <input class="form-control" placeholder="Username" type="text" name="username">
+            <input class="form-control" placeholder="Email" type="email" name="Email">
+            <input class="form-control" placeholder="Password" type="password" name="password">
+            <label for="DateofBirth">Date of Birth:</label>
+            <input class="form-control" placeholder="Date of Birth" id="DateofBirth" type="date" name="DateOfBirth">
+
+            <input type="radio" id="male" name="Gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="Gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="submit" class="btn btn-dark">
+
+        </form>
+    </div>
+</body>

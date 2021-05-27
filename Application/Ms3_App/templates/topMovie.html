@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <Title>Top 10 movies</Title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1 style="text-align:center"> Top 10 movies according to <b>Total Revenue</b> </h1> <br />
+    <table class="table table-bordered table-striped table-sm">
+        <thead class="table-dark">
+            <tr>
+                <th class="th-sm">Name</th>
+                <th class="th-sm">Link</th>
+                <th class="th-sm">Poster</th>
+                <th class="th-sm">Total Revenue</th>
+            </tr>
+        </thead>
+
+        {% for item in data %}
+        <tr>
+            <td>{{item.MovieName}}</td>
+            <td><a href="./movies/{{item.ID}}">link</a></td>
+            <td><img src="{{item.poster}}" width="200" height="200"> </td>
+            <td>{{item.TotalRevenue}} LE</td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+
+</body>

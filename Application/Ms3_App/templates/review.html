@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <Title>{{name[0].MovieName}} reviews </Title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1 style="text-align:center"> {{name[0].MovieName}} reviews </h1> <br />
+    <table class="table table-bordered table-striped table-sm">
+        <thead class="table-dark">
+            <tr>
+                <th class="th-sm">UserName</th>
+                <th class="th-sm">Rate</th>
+                <th class="th-sm">Textual Review</th>
+            </tr>
+        </thead>
+
+        {% for item in data %}
+        <tr>
+            <td>{{item.UserName}}</td>
+            <td>{{item.RateValue}}</td>
+            <td>{{item.TextualReview}} </td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+
+</body>
